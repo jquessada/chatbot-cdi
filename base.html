@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <p>Oi, eu sou o CDIBot, eu sou a primeira versão do CDIBot, um assistente virtual pronto para tirar suas dúvidas sobre os cursos de informática da FT!</p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #0002fe;
+            color: #fff;
+            padding: 20px;
+        }
+
+        #chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #0002fe;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #chatbot-frame {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            width: 350px;
+            height: 430px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CDIBot</h1>
+    <div id="chatbot-icon" onclick="popupChatbot()">
+        <span>&#10148;</span>
+    </div>
+    <iframe id="chatbot-frame" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/409f2a58-5cce-47d6-ac91-f81959583cb7"></iframe>
+
+    <script>
+        function popupChatbot() {
+            var chatbotFrame = document.getElementById('chatbot-frame');
+            if (chatbotFrame.style.display === 'none') {
+                chatbotFrame.style.display = 'block';
+            } else {
+                chatbotFrame.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
